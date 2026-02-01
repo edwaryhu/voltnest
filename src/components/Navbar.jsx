@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Search, User, ShoppingBag, Menu, X, ChevronDown, Zap, ArrowRight } from 'lucide-react'
 
@@ -86,12 +87,12 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-xl bg-[#207233] flex items-center justify-center group-hover:shadow-[0_0_20px_rgba(32,114,51,0.4)] transition-shadow">
               <Zap className="w-5 h-5 text-white" fill="white" />
             </div>
             <span className="font-display font-bold text-xl text-gray-900">VoltNest</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
@@ -254,12 +255,12 @@ export default function Navbar() {
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-8">
-                <a href="#" className="flex items-center gap-2">
+                <Link to="/" className="flex items-center gap-2" onClick={() => setIsMobileOpen(false)}>
                   <div className="w-10 h-10 rounded-xl bg-[#207233] flex items-center justify-center">
                     <Zap className="w-5 h-5 text-white" fill="white" />
                   </div>
                   <span className="font-display font-bold text-xl text-gray-900">VoltNest</span>
-                </a>
+                </Link>
                 <button onClick={() => setIsMobileOpen(false)} className="w-10 h-10 flex items-center justify-center text-gray-600">
                   <X size={24} />
                 </button>
