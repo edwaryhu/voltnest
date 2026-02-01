@@ -8,7 +8,7 @@ import Apex300Product from './pages/Apex300Product.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/voltnest">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/npex-600" element={<Apex300Landing />} />
